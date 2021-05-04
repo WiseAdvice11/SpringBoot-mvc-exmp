@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+
+
+
+<h3 class="center">List of Books</h3>
+
+<table class="centered">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Author</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book: ${books}">
+        <td th:text="${book.name}" />
+        <td th:text="${book.author}" />
+    </tr>
+    </tbody>
+</table>
+
+
+
+</body>
+</html>
