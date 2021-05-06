@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -30,6 +30,11 @@
     </tbody>
 </table>
 
+<form action="#" th:action="@{/}" th:object="${newbook}" method="post">
+    <p> Author: <input type="text" th:field="*{author}" /></p>
+    <p> Name: <input type="text" th:field="*{name}" /></p>
+    <p><input type="submit" value="Create new Book" /> <input type="reset" value="Reset" /></p>
+</form>
 
 
 </body>
